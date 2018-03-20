@@ -11,9 +11,11 @@ wp-content/backupwordpress-*/
 wp-content/managewp/backups/
 wp-content/advanced-cache.php
 wp-content/wp-cache-config.php
+wp-content/themes/understrap-child/node_modules
 sitemap.xml
 sitemap.xml.gz
 *.log
+.idea
 
 # @TODO writable paths
 wp-content/cache/

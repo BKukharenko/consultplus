@@ -1,0 +1,38 @@
+.header-contacts {
+  background-color: $header_footer_bg_color;
+
+  .header-label {
+    color: $header_footer_labels_color;
+  }
+
+  .header-link {
+    color: $header_footer_text_color;
+
+    &:hover {
+      color: $secondary_color;
+    }
+  }
+
+  .phone {
+    border-left: 1px solid $header_footer_text_color;
+  }
+}
+
+.nav {
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: 400;
+  a {
+    color: $header_menu_color;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  .active {
+    a {
+      color: $secondary-color;
+    }
+  }
+}
