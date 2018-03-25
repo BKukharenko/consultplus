@@ -1,6 +1,7 @@
 .text-above-heading {
   font-size: 0.8rem;
 }
+
 .section-heading {
   font-weight: 700;
 }
@@ -59,7 +60,6 @@
     }
   }
 }
-
 
 .medal-border {
   z-index: 3;
@@ -136,6 +136,250 @@
 
     &:hover .border {
       opacity: 1;
+    }
+  }
+}
+
+.testimonials-section {
+  background-color: $primary_color;
+
+  .testimonials-heading {
+    color: #ffffff;
+
+    .text-above-heading {
+      opacity: 0.5;
+    }
+  }
+
+  .quotes-slider, .clients-slider {
+    list-style: none;
+
+    .quote {
+      display: flex;
+      &:before {
+        margin: auto 20px auto 0;
+        content: url("../img/icon-quote-before.png");
+      }
+
+      &:after {
+        margin: auto 0 auto 10px;
+        content: url("../img/icon-quote-after.png");
+      }
+
+      p {
+        padding: 20px 0 0 0;
+      }
+    }
+  }
+
+  .client {
+
+    img {
+      display: inline;
+      max-width: unset;
+    }
+
+    .client-data {
+      color: #ffffff;
+    }
+
+    .client-name {
+      font-weight: 700;
+    }
+  }
+
+  .slick-dots {
+    li {
+      button {
+        &:before {
+          font-size: 2.5rem;
+          color: $third_color;
+        }
+      }
+    }
+  }
+
+  .slick-dots {
+    li.slick-active {
+      button {
+        &:before {
+          color: $third_color
+        }
+      }
+    }
+  }
+
+  .slick-current {
+    img {
+      border: 3px solid $third_color;
+      border-radius: 40px;
+    }
+  }
+}
+
+.our-blog-section {
+  background-color: $leave_comments_section_bg_color;
+
+  .blog-section-link {
+    color: $main_text_color;
+    border: 0.125rem solid $main_text_color;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-size: 0.75rem;
+    text-decoration: none;
+
+    &:hover {
+      border-color: $secondary_color;
+    }
+  }
+
+  .recent-posts-list {
+    list-style: none;
+
+    .recent-post-link {
+      color: $footer_emil_input_bg;
+      white-space: nowrap;
+
+      .recent-post-header {
+        font-weight: 700;
+        font-size: 1.125rem;
+      }
+    }
+
+    .recent-post-excerpt {
+      font-size: 0.938rem;
+      margin-bottom: 0;
+    }
+
+    .date-link {
+      color: black;
+      text-decoration: none;
+
+      &:hover {
+        color: $third_color;
+
+        time {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .blog-image {
+    img {
+      min-height: 100%;
+    }
+  }
+}
+
+.featured-projects-section {
+
+  .left-main-project, .left-project, .right-project, .right-bottom-project {
+
+    .image-wrapper {
+      position: relative;
+
+      img {
+        min-width: 100%;
+      }
+
+      .bottom-triangle {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        bottom: 0;
+        z-index: 3;
+
+        &:after {
+          content: ' ';
+          position: absolute;
+          border-style: solid;
+          border-width: 50px 0 0 50px;
+          border-color: transparent transparent transparent $primary_color;
+          bottom: 0;
+        }
+
+        &:hover {
+          &:after  {
+            border-color: transparent transparent transparent #f6a149;
+          }
+        }
+        &:hover + .overlay {
+          width: 100%;
+          left: 0;
+        }
+
+
+        .fa-plus {
+          color: $heading_txt_color;
+          position: absolute;
+          transform: translate(-50%, -50%);
+          left: 18px;
+          bottom: 0;
+          z-index: 1;
+        }
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 100%;
+      right: 0;
+      background-color: $secondary_color;
+      overflow: hidden;
+      width: 0;
+      height: 100%;
+      transition: .5s ease;
+      z-index: 2;
+
+      .project-header {
+        font-weight: 700;
+        font-size: 1.125rem;
+      }
+
+      .project-description {
+        font-size: 0.938rem;
+      }
+    }
+
+/*    &:hover .overlay {
+      width: 100%;
+      left: 0;
+    }*/
+
+    .overlay-content {
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .post-taxonomy {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+
+      .tax-link {
+        color: $heading_txt_color;
+        border: 2px solid $secondary_color;
+        padding: 12px 15px;
+        border-radius: 40px;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $primary_color;
+          transition: 0.5s;
+        }
+      }
+    }
+  }
+
+  .left-project, .right-project, .right-bottom-project {
+
+    .post-taxonomy {
+      top: 10%;
     }
   }
 }

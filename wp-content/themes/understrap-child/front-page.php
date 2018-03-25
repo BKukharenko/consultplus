@@ -17,6 +17,15 @@ $container = get_theme_mod('understrap_container_type');
 				case 'our_steps_section' :
 					get_template_part('page-templates/modules/our-steps-section');
 					break;
+				case 'featured_projects_section' :
+					get_template_part('page-templates/modules/featured-projects-section');
+					break;
+				case 'testimonials_section' :
+					get_template_part('page-templates/modules/testimonials-section');
+					break;
+				case 'our_blog_section' :
+					get_template_part('page-templates/modules/our-blog-section');
+					break;
 				case 'contact_us_section' :
 					get_template_part('page-templates/modules/contact-us-section');
 					break;

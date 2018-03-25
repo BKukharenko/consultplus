@@ -20,6 +20,11 @@ function theme_enqueue_styles() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), false );
 	wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), $the_theme->get( 'Version' ), true );
+	if (is_front_page()) {
+		wp_enqueue_style( 'slick-styles', get_stylesheet_directory_uri() . '/libs/slick.css', array(), $the_theme->get( 'Version' ), false );
+		wp_enqueue_style( 'slick-theme-styles', get_stylesheet_directory_uri() . '/libs/slick-theme.css', array(), $the_theme->get( 'Version' ), false );
+		wp_enqueue_script( 'slick-scripts', get_stylesheet_directory_uri() . '/libs/slick.min.js', array(), $the_theme->get( 'Version' ), true );
+    }
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -32,6 +37,7 @@ require_once( 'inc/widgets.php' );
 
 require_once( 'inc/setup.php' );
 require_once( 'inc/taxonomy.php' );
+require_once( 'inc/custom-post-type.php' );
 
 //Show empty tags in right sidebar on Blog and Pages
 add_filter( 'get_terms_args', 'show_empty_tags' );
@@ -82,4 +88,14 @@ function custom_comment( $comment, $args, $depth ) {
             </div>
         </article>
     </li>
-<?php } ?>
+<?php }
+
+//Function to get taxonomy archive link
+function get_taxonomy_archive_link( $taxonomy ) {
+	$tax = get_taxonomy( $taxonomy ) ;
+	return get_bloginfo( 'url' ) . '/' . $tax->rewrite['slug'];
+}
+?>
+
+
+

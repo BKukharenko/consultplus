@@ -28,5 +28,5 @@ function create_industry_taxonomies() {
         'rewrite'           => array( 'slug' => 'industry' ),
     );
 
-    register_taxonomy( 'industry', array( 'post' ), $args );
+    register_taxonomy( 'industry', array( 'projects' ), $args );
 }

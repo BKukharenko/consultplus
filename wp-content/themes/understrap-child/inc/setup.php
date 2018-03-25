@@ -119,12 +119,16 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	 */
 	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
 
+		if(is_front_page()) {
+			return $post_excerpt;
+		}
+
 		if (has_post_format('audio')) {
 			return $post_excerpt . '<div class="row no-gutters excerpt"><a class="btn my-auto button btn-secondary understrap-read-more-link text-uppercase" href="' . esc_url( get_permalink( get_the_ID() ) ) . '">' . __( 'Play More',
 					'understrap' ) . '</a>
 	<div class="ml-auto no-gutters text-uppercase post-share-text row align-items-center">
 	 <time class="post-time text-uppercase"
-                                      datetime="'. the_date( 'Y-m-d' ) .'">'. get_the_time( 'd-M-Y' ).'</time>
+                                      datetime="'. get_the_date( 'Y-m-d' ) .'">'. get_the_time( 'd-M-Y' ).'</time>
 	<span class="share-text">' . __( 'Share:', 'understrap' ) . '</span>
 		<ul class="list-inline my-auto ml-auto share-list">
 			<li class="list-inline-item"><a class="share" href="#"><i class="fa fa-facebook-f"></i></a></li>
@@ -138,7 +142,7 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 					'understrap' ) . '</a>
 	<div class="ml-auto no-gutters text-uppercase post-share-text row align-items-center">
 	 <time class="post-time text-uppercase"
-                                      datetime="' . the_date( 'Y-m-d' ) . '">' . get_the_time( 'd-M-Y' ) . '</time>
+                                      datetime="' . get_the_date( 'Y-m-d' ) . '">' . get_the_time( 'd-M-Y' ) . '</time>
 	<span class="share-text">' . __( 'Share:', 'understrap' ) . '</span>
 		<ul class="list-inline my-auto ml-auto share-list">
 			<li class="list-inline-item"><a class="share" href="#"><i class="fa fa-facebook-f"></i></a></li>

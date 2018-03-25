@@ -11097,6 +11097,151 @@ p:nth-of-type(1) {
     .industry-section .education:hover .border, .industry-section .business:hover .border, .industry-section .technology:hover .border, .industry-section .real-estate:hover .border, .industry-section .banking:hover .border {
       opacity: 1; }
 
+.testimonials-section {
+  background-color: #03b6e7; }
+  .testimonials-section .testimonials-heading {
+    color: #ffffff; }
+    .testimonials-section .testimonials-heading .text-above-heading {
+      opacity: 0.5; }
+  .testimonials-section .quotes-slider, .testimonials-section .clients-slider {
+    list-style: none; }
+    .testimonials-section .quotes-slider .quote, .testimonials-section .clients-slider .quote {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; }
+      .testimonials-section .quotes-slider .quote:before, .testimonials-section .clients-slider .quote:before {
+        margin: auto 20px auto 0;
+        content: url("../img/icon-quote-before.png"); }
+      .testimonials-section .quotes-slider .quote:after, .testimonials-section .clients-slider .quote:after {
+        margin: auto 0 auto 10px;
+        content: url("../img/icon-quote-after.png"); }
+      .testimonials-section .quotes-slider .quote p, .testimonials-section .clients-slider .quote p {
+        padding: 20px 0 0 0; }
+  .testimonials-section .client img {
+    display: inline;
+    max-width: unset; }
+  .testimonials-section .client .client-data {
+    color: #ffffff; }
+  .testimonials-section .client .client-name {
+    font-weight: 700; }
+  .testimonials-section .slick-dots li button:before {
+    font-size: 2.5rem;
+    color: #16d428; }
+  .testimonials-section .slick-dots li.slick-active button:before {
+    color: #16d428; }
+  .testimonials-section .slick-current img {
+    border: 3px solid #16d428;
+    border-radius: 40px; }
+
+.our-blog-section {
+  background-color: #e7eff1; }
+  .our-blog-section .blog-section-link {
+    color: #838b8c;
+    border: 0.125rem solid #838b8c;
+    padding: 12px 28px;
+    border-radius: 40px;
+    font-size: 0.75rem;
+    text-decoration: none; }
+    .our-blog-section .blog-section-link:hover {
+      border-color: #ffac56; }
+  .our-blog-section .recent-posts-list {
+    list-style: none; }
+    .our-blog-section .recent-posts-list .recent-post-link {
+      color: #323334;
+      white-space: nowrap; }
+      .our-blog-section .recent-posts-list .recent-post-link .recent-post-header {
+        font-weight: 700;
+        font-size: 1.125rem; }
+    .our-blog-section .recent-posts-list .recent-post-excerpt {
+      font-size: 0.938rem;
+      margin-bottom: 0; }
+    .our-blog-section .recent-posts-list .date-link {
+      color: black;
+      text-decoration: none; }
+      .our-blog-section .recent-posts-list .date-link:hover {
+        color: #16d428; }
+        .our-blog-section .recent-posts-list .date-link:hover time {
+          font-weight: 700; }
+  .our-blog-section .blog-image img {
+    min-height: 100%; }
+
+.featured-projects-section .left-main-project, .featured-projects-section .left-project, .featured-projects-section .right-project, .featured-projects-section .right-bottom-project {
+  /*    &:hover .overlay {
+      width: 100%;
+      left: 0;
+    }*/ }
+  .featured-projects-section .left-main-project .image-wrapper, .featured-projects-section .left-project .image-wrapper, .featured-projects-section .right-project .image-wrapper, .featured-projects-section .right-bottom-project .image-wrapper {
+    position: relative; }
+    .featured-projects-section .left-main-project .image-wrapper img, .featured-projects-section .left-project .image-wrapper img, .featured-projects-section .right-project .image-wrapper img, .featured-projects-section .right-bottom-project .image-wrapper img {
+      min-width: 100%; }
+    .featured-projects-section .left-main-project .image-wrapper .bottom-triangle, .featured-projects-section .left-project .image-wrapper .bottom-triangle, .featured-projects-section .right-project .image-wrapper .bottom-triangle, .featured-projects-section .right-bottom-project .image-wrapper .bottom-triangle {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      bottom: 0;
+      z-index: 3; }
+      .featured-projects-section .left-main-project .image-wrapper .bottom-triangle:after, .featured-projects-section .left-project .image-wrapper .bottom-triangle:after, .featured-projects-section .right-project .image-wrapper .bottom-triangle:after, .featured-projects-section .right-bottom-project .image-wrapper .bottom-triangle:after {
+        content: ' ';
+        position: absolute;
+        border-style: solid;
+        border-width: 50px 0 0 50px;
+        border-color: transparent transparent transparent #03b6e7;
+        bottom: 0; }
+      .featured-projects-section .left-main-project .image-wrapper .bottom-triangle:hover:after, .featured-projects-section .left-project .image-wrapper .bottom-triangle:hover:after, .featured-projects-section .right-project .image-wrapper .bottom-triangle:hover:after, .featured-projects-section .right-bottom-project .image-wrapper .bottom-triangle:hover:after {
+        border-color: transparent transparent transparent #f6a149; }
+      .featured-projects-section .left-main-project .image-wrapper .bottom-triangle:hover + .overlay, .featured-projects-section .left-project .image-wrapper .bottom-triangle:hover + .overlay, .featured-projects-section .right-project .image-wrapper .bottom-triangle:hover + .overlay, .featured-projects-section .right-bottom-project .image-wrapper .bottom-triangle:hover + .overlay {
+        width: 100%;
+        left: 0; }
+      .featured-projects-section .left-main-project .image-wrapper .bottom-triangle .fa-plus, .featured-projects-section .left-project .image-wrapper .bottom-triangle .fa-plus, .featured-projects-section .right-project .image-wrapper .bottom-triangle .fa-plus, .featured-projects-section .right-bottom-project .image-wrapper .bottom-triangle .fa-plus {
+        color: #ffffff;
+        position: absolute;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        left: 18px;
+        bottom: 0;
+        z-index: 1; }
+  .featured-projects-section .left-main-project .overlay, .featured-projects-section .left-project .overlay, .featured-projects-section .right-project .overlay, .featured-projects-section .right-bottom-project .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: #ffac56;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+    z-index: 2; }
+    .featured-projects-section .left-main-project .overlay .project-header, .featured-projects-section .left-project .overlay .project-header, .featured-projects-section .right-project .overlay .project-header, .featured-projects-section .right-bottom-project .overlay .project-header {
+      font-weight: 700;
+      font-size: 1.125rem; }
+    .featured-projects-section .left-main-project .overlay .project-description, .featured-projects-section .left-project .overlay .project-description, .featured-projects-section .right-project .overlay .project-description, .featured-projects-section .right-bottom-project .overlay .project-description {
+      font-size: 0.938rem; }
+  .featured-projects-section .left-main-project .overlay-content, .featured-projects-section .left-project .overlay-content, .featured-projects-section .right-project .overlay-content, .featured-projects-section .right-bottom-project .overlay-content {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .featured-projects-section .left-main-project .post-taxonomy, .featured-projects-section .left-project .post-taxonomy, .featured-projects-section .right-project .post-taxonomy, .featured-projects-section .right-bottom-project .post-taxonomy {
+    position: absolute;
+    top: 5%;
+    left: 5%; }
+    .featured-projects-section .left-main-project .post-taxonomy .tax-link, .featured-projects-section .left-project .post-taxonomy .tax-link, .featured-projects-section .right-project .post-taxonomy .tax-link, .featured-projects-section .right-bottom-project .post-taxonomy .tax-link {
+      color: #ffffff;
+      border: 2px solid #ffac56;
+      padding: 12px 15px;
+      border-radius: 40px;
+      text-decoration: none; }
+      .featured-projects-section .left-main-project .post-taxonomy .tax-link:hover, .featured-projects-section .left-project .post-taxonomy .tax-link:hover, .featured-projects-section .right-project .post-taxonomy .tax-link:hover, .featured-projects-section .right-bottom-project .post-taxonomy .tax-link:hover {
+        background-color: #03b6e7;
+        -webkit-transition: 0.5s;
+        transition: 0.5s; }
+
+.featured-projects-section .left-project .post-taxonomy, .featured-projects-section .right-project .post-taxonomy, .featured-projects-section .right-bottom-project .post-taxonomy {
+  top: 10%; }
+
 @media (min-width: 768px) {
   .nav {
     -webkit-box-orient: horizontal;

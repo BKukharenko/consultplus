@@ -39,7 +39,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							the_post_thumbnail(); ?>
                             <div class="post-heading">
                                 <time class="post-time text-uppercase"
-                                      datetime="<?php the_date( 'Y-m-d' ); ?>"> <?= get_the_time( 'd-M-Y' ); ?></time>
+                                      datetime="<?= get_the_date( 'Y-m-d' ); ?>"> <?= get_the_time( 'd-M-Y' ); ?></time>
                                 <h1 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                 </h1>
                             </div>
