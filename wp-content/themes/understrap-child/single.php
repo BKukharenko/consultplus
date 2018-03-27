@@ -88,7 +88,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                                         <h4 class="related-post-header mt-4"><?= $recent_post['post_title'] ?></h4>
                                     </a>
                                     <time class="post-time text-uppercase"
-                                          datetime="<?php the_date( 'Y-m-d' ); ?>"> <?= get_the_time( 'd-M-Y' ); ?></time>
+                                          datetime="<?php echo date( 'Y-m-d', strtotime( $recent_post['post_date'] ) ); ?>"> <?php echo date( 'd-M-Y', strtotime( $recent_post['post_date'] ) ); ?></time>
                                 </li>
 							<?php } ?>
                         </ul>
