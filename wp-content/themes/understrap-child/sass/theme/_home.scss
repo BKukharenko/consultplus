@@ -12,7 +12,7 @@
     list-style: none;
 
     .contact-list-item {
-      border: 1px solid #c0c0c0;
+      border: 1px solid #c0c0c0; // цвета в переменные
       padding: 35px 40px 35px 25px;
     }
 
@@ -252,7 +252,7 @@
     }
 
     .date-link {
-      color: black;
+      color: black; //так то точно плохо. В переменные.
       text-decoration: none;
 
       &:hover {
