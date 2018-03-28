@@ -8,7 +8,7 @@
 		<?php
 		$args      = array(
 			'post_type' => 'testimonials',
-		);
+		);<!-- Указывай сколько тебе постов достать. А то будет брать столько сколько указано в админке. А если его изменять на 1?  -->
 		$the_query = new WP_Query( $args );
 
 		if ( $the_query->have_posts() ) { ?>
@@ -52,7 +52,7 @@
 			/* Restore original Post Data */
 			wp_reset_postdata();
 		} else {
-			// no posts found
+			// no posts found<!-- тут бы все таки текст а не только коммент а еще лучше ввобще не выводить секцию если ничего не нашло -->
 		}
 		?>
     </div>
