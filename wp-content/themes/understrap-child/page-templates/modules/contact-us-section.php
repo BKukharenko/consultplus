@@ -6,10 +6,10 @@
             <h2 class="section-heading text-uppercase"><?= get_sub_field( 'main_heading' ); ?></h2>
         </div>
         <ul class="contacts-list row pl-0 justify-content-between">
-            <li class="contact-list-item d-flex">
+            <li class="contact-list-item d-flex"> <!-- это бы все в цикле прогонять -->
                 <i class="fa fa-envelope"></i>
                 <div class="email-wrapper d-flex flex-column pl-4 mt-1">
-                    <span class="contact-item-text text-uppercase"><?= __('Email', 'understrap');?></span>
+                    <span class="contact-item-text text-uppercase"><?= __('Email', 'understrap');?></span><!-- Весь текст должен быть в админке -->
                     <a class="contact-link mt-2" href="mailto:<?= get_sub_field('email')?>"><?= get_sub_field('email')?></a>
                 </div>
             </li>
