@@ -1,6 +1,6 @@
 <?php $container = get_theme_mod( 'understrap_container_type' ); ?>
 <section class="about-us-section py-5">
-    <div class="<?php echo esc_attr( $container ); ?> px-0" id="content" tabindex="-1">
+    <div class="<?php echo esc_attr( $container ); ?> px-0" id="content" tabindex="-1"> <!-- Ты делаешь контейнер и тут же убираешь его паддинги. Это не правильно ?>
         <div class="row about-us-content-wrapper">
             <div class="col-md-6 about-us-text">
                 <div class="section-heading-wrapper py-4 text-right">
@@ -9,7 +9,7 @@
                 </div>
                 <div class="about-us-description d-flex flex-column">
                 <p class="about-us-excerpt text-right mt-0"><?= get_sub_field('excerpt');?></p>
-                <a class="about-us-link button ml-auto mt-4" href="#"><?= get_sub_field('text_on_button');?></a>
+                <a class="about-us-link button ml-auto mt-4" href="#"><?= get_sub_field('text_on_button');?></a><!-- отступы -->
                 </div>
             </div>
             <div class="col-md-6 about-us-image d-flex">
