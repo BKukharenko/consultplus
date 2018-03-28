@@ -6,7 +6,7 @@ if ( has_post_thumbnail( $page_id ) ):
 	$image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' );
 endif;
 
-$image_URI = $image[0];
+$image_URI = $image[0]; <!-- зачем так сложно. Есть же https://wp-kama.ru/function/get_the_post_thumbnail_url -->
 ?>
 <section class="our-blog-section">
     <div class="container-fluid">
@@ -57,7 +57,7 @@ $image_URI = $image[0];
 							)
 						);
 
-						$recent_posts = wp_get_recent_posts( $args ); ?>
+						$recent_posts = wp_get_recent_posts( $args ); ?><!-- зачем так сложно? просто возьми 3 последних поста по дате --> --Ю
                         <ul class="recent-posts-list pl-0 mt-5 mb-0">
 							<?php foreach ( $recent_posts as $recent_post ) {
 								setup_postdata( $recent_post );
@@ -67,7 +67,7 @@ $image_URI = $image[0];
                                 <li class="recent-post mb-5">
                                     <a class="date-link" href="<?= get_day_link($archive_year, $archive_month, $archive_day); ?>">
                                     <time class="recent-post-date text-uppercase"
-                                          datetime="<?= get_the_date( 'Y-m-d' ); ?>"> <?= get_the_time( 'F d,Y' ); ?></time>
+                                          datetime="<?= get_the_date( 'Y-m-d' ); ?>"> <?= get_the_time( 'F d,Y' ); ?></time><!-- Пользуйся только тайм (там тоже год можно) причина - в дате при постах за 1 день - выведется только 1 результат при определенных условиях -->
                                     </a>
                                     <a href="<?= get_permalink( $recent_post["ID"] ) ?>" class="recent-post-link">
                                         <h3 class="recent-post-header text-uppercase"><?= $recent_post['post_title'] ?></h3>
