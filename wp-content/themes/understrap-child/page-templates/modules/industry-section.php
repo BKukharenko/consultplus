@@ -4,11 +4,11 @@
         <div class="row">
             <div class="industries col-md-5">
                 <div class="section-heading-wrapper py-4 px-2">
-                    <span class="text-above-heading text-uppercase"><?= get_sub_field( 'text_above_main_heading' ); ?></span>
+                    <span class="text-above-heading text-uppercase"><?= get_sub_field( 'text_above_main_heading' ); ?></span><!-- Правильно было бы сначала проверять наличие и заполненость данного поля и только потом выводить его обертку и содержание -->
                     <h2 class="section-heading text-uppercase"><?= get_sub_field( 'main_heading' ); ?></h2>
                 </div>
-                <div class="industries-taxonomy row no-gutters">
-                    <div class="education d-flex flex-column col-md-6 p-4">
+                <div class="industries-taxonomy row no-gutters"><!-- это же список  -->
+                    <div class="education d-flex flex-column col-md-6 p-4"> <!-- тут надо в цикле выводить первых 5 термов таксономии (или первых 5 фичед термов) а не вручную перечислять их  -->
                         <i class="fa fa-book mb-2 term-icon"></i>
 						<?php
 						$education_term = get_term_by( 'slug', 'education', 'industry' );
